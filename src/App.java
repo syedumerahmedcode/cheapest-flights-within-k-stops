@@ -35,6 +35,13 @@ The graph is shown above.
 The optimal path with no stops from city 0 to 2 is marked in red and has cost 500.
          */
 
-         
+         int n = 4;
+        int[][] flights = {{0, 1, 100}, {1, 2, 100}, {2, 0, 100}, {1, 3, 600}, {2, 3, 200}};
+        int src = 0;
+        int dst = 3;
+        int K = 1;
+        Solution solution = new Solution();
+        int result=solution.findCheapestPrice(n, flights, src, dst, K);
+        System.out.println("The cheapest flight with "+K+" stops will cost: "+result);
     }
 }
